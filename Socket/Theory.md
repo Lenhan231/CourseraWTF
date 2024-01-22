@@ -114,4 +114,41 @@
 - Not any concept of a Central Server. 
 - Each device is free for working as either client or server.
 ## OSI Model (Open Systems Interconnection):
-- It is a reference model that specifies standards for communications protocols and also the functionalities of each layer. The OSI has been developed by the International Organization For Standardization and it is 7 layer architecture. Each layer of OSI has different functions and each layer has to follow different protocols. The 7 layers are as follows: 
+### Theory:
+- A reference model that specifies standards for communications protocols and also the functionalities of each layer. 
+- Developed by the International Organization For Standardization 
+- 7 layer architecture.
+- Each layer has different functions 
+- Each layer has to follow different protocols. 
+- Separate and independence
+- Each layer cannot be effected if any other be alternative.
+- Can separate and cancel went uncrucial.
+- Guaranteed to connect with other network.
+### [Layers](https://youtube.com/watch?v=8H0USHO8g-g):
+#### Physical Layer:
+- Bottom-most layer.
+- Consists of networks components (power plugs, connectors, receivers, cable types, etc.) 
+- Converts data to electrical, radio or optical pulses bit data form.
+- Through the cab or radio.
+#### Data link Layer:
+##### Frame Synchronization: 
+- Data is divided into frames for transmission. 
+- The Data Link Layer adds a header to each frame to define the start and end of the frame.
+
+##### Physical Addressing: 
+- If frames are to be distributed to different systems on the network, the Data Link Layer adds a header to the frame to define the physical address of the sender or receiver of the frame.
+
+##### Flow Control: 
+- If the rate at which data is taken by the receiver is less than the rate produced in the sender, the Data Link Layer imposes a flow control mechanism to prevent overwhelming the receiver.
+
+##### Error Control:
+- The Data Link Layer adds reliability to the Physical Layer by adding mechanisms to detect and retransmit damaged or lost frames. It also prevents duplication of frames using an error control mechanism.
+
+##### Access Control:
+- When two or more devices are connected to the same link, data link layer protocols are necessary to determine which device has control over the link at any given time.
+
+#### Network Layer:
+#### Transport Layer:
+#### Session Layer:
+#### Presentation Layer:
+#### Application Layer:
