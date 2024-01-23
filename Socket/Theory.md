@@ -148,7 +148,24 @@
 - When two or more devices are connected to the same link, data link layer protocols are necessary to determine which device has control over the link at any given time.
 
 #### Network Layer:
+- The network layer is responsible for routing packets between networks.
+- It determines the best path to send data based on network conditions, such as available bandwidth and latency. 
+- The network layer also handles IP addressing, which allows devices on different networks to communicate with each other.
+
 #### Transport Layer:
+- The transport layer is responsible for ensuring that data is delivered reliably and in the correct order. 
+- It provides end-to-end communication between two applications, ensuring that data is delivered without errors and in a timely manner. 
+- The transport layer also handles connection establishment, flow control, and error detection/correction.
+  
 #### Session Layer:
+- The session layer is responsible for managing the creation, maintenance, and termination of sessions between two applications. 
+- This includes establishing a connection, managing the flow of data, and ensuring that the session is closed properly when it is no longer needed.
+  
 #### Presentation Layer:
+- The presentation layer is responsible for converting data into a format that can be understood by the application it is being sent to. 
+- This includes encoding data into a format that can be sent over a network, such as ASCII or binary, and decoding data into a format that can be used by an application.
+
 #### Application Layer:
+- The application layer is responsible for providing the services that end users want or need. 
+- Examples of application layer services include email, web browsing, and FTP. 
+- The application layer is also responsible for interpreting user requests and sending them to the appropriate service or device.T
