@@ -1,13 +1,13 @@
-import urllib2.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
-import ssl
+html_doc = """
+<html><head><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse's story</b></p>
 
-ctx = ssl.create_default_context()
-ctx.check_hostnames = False
-ctx.verify_mode = ssl.CERT_NONE
+<p class="story">Once upon a time there were three little sisters; and their names were
+Elsie, Lacie and Tillie; and they lived at the bottom of a well.
+...</p>
+"""
+soup = BeautifulSoup(html_doc, 'html.parser')
 
-url = input("Enter the URL: ")
-html = urllib.request.urlopen(url, context=ctx).read()
-tags = BeautifulSoup(html, 'html.parser').find_all('a')
-for tag in tags:
-    print(tag.get('href'))
+print(soup.prettify())
