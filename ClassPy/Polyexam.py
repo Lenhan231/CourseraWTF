@@ -6,8 +6,12 @@ class vehicle:
     def traveling(self):
         print("move")
 
-def car(vehicle):
+class car(vehicle):
     pass
 
-def boat(vehicle):
-    super.__init__()
+class boat(vehicle):
+    def traveling(self):
+        print("sail")
+
+b1 = boat("lkasdjf", 'laskdjhf ')
+b1.traveling()

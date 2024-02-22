@@ -1,0 +1,4 @@
+Code	Name	Course
+001	Toan	15
+002	Van	30
+003	Anh	10
