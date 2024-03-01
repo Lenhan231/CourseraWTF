@@ -18,15 +18,34 @@ def tap_do_thi_tu_tap_tin():
         dt[cot][dong] = khoang_cach
     return dt  
 
-def dijkstra(dt):
-    for dong in dt:
-        for dia_chi in range(len(dong)):
-            if  dia_chi != 0:
-                pass
-    pass
+def duong_di(ds_dinh_truoc, dinh_dich):
+    ds = [dinh_dich]
+    dinh = dinh_dich 
+    while True:
+        dinh = ds_dinh_truoc[dinh]
+        if dinh == None:
+            break
+        ds.insert(0, dinh)
+    ds = [str(x) for x in ds]
+    return '->'.join(ds)
 
-def xuly():
-    pass
+def khoang_cach_ngan_nhat(ds_khoang_cach, ds_dinh_cay_ngan_nhat):
+    nho_nhat = math.inf
+    for dinh in range(len(ds_khoang_cach)):
+        if ds_khoang_cach[dinh] < nho_nhat and ds_dinh_cay_ngan_nhat[dinh] == False:
+            nho_nhat = ds_khoang_cach[dinh]
+            dinh_nho_nhat = dinh
+    return dinh_nho_nhat
+
+def dijkstra(do_thi, dinh_nguon):
+    so_luong_dinh = len(do_thi)
+    so_khoang_cach = [math.inf] * so_luong_dinh
+    ds_khoan_cach[dinh_nguon] = 0
+    ds_dinh_cay_ngan_nhat = [False] * so_luong_dinh
+    ds_dinh_truoc = [None] * so_luong_dinh
+    for i in range(so_luong_dinh):
+        x = khoang_cach_ngan_nhat(ds_khoang_cach, ds_dinh_cay_ngan_nhat):
+        
 
 if __name__ == "__main__":
-    dijkstra(tap_do_thi_tu_tap_tin())
+    duong_di(tap_do_thi_tu_tap_tin())
