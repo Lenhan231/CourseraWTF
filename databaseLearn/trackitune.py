@@ -50,6 +50,7 @@ for line in lines:
     GenreName = pieces[6]
 
     print(name, artist, album, count, rating, length, GenreName)
+    
     cur.execute('''INSERT OR IGNORE INTO Genre (name)
                 VALUES ( ? )''', (GenreName,))
     cur.execute('SELECT id FROM Genre WHERE name = ? ', (GenreName, ))
