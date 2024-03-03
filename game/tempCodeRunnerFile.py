@@ -1,2 +1,2 @@
 
-                if (YC + int(BC)) % 
+button_start.pack()

@@ -1,6 +1,6 @@
 import random
 
-def botwin(YC,BC):
+def botwin(YC, BC):
     global YS, BS
     YS -= YC
     BS += YC
@@ -23,45 +23,50 @@ def chan():
     YC = int(input("Input your coin: "))
     while YS != 0:
         if BS == 2:
-           BC = 1 if YC % 2 != 0 else 2  
-           botwin(YC, BC)
+            BC = 1 if YC % 2 != 0 else 2  
         else:
-            BC = random.randint(1, BS - 2)
-            if (YC + BC) % 2 == 0:
-                botlose(YC)
-            else:
-                botwin(YC, BC)
-        if YS != 0 :
+            BC = random.randint(1, min(2, BS))  # Adjusted to ensure BC doesn't exceed BS
+            
+        if (YC + BC) % 2 == 0:
+            botlose(YC)
+        else:
+            botwin(YC, BC)
+        
+        if YS != 0:
             YC = int(input("Input your coin: "))
             while YC > YS:
                 YC = int(input("Please reinput your coin it is invalid because your coin is smaller than your input coin: "))
-    print("You lose")
+        if BS <= 0:
+            print("Bot lose the game")
+            exit()
+    print("You lose the game")
 
 def le():
     global YS, BS
     YC = int(input("Input your coin: "))
     while YS != 0:
         if BS == 2:
-           BC = 2 if YC % 2 != 0 else 1  
-           botwin(YC, BC)
+            BC = 2 if YC % 2 != 0 else 1
         else:
-            BC = random.randint(1, BS - 2)
-            while int(BC) == YC:
-                BC = random.randint(1, BS - 2)
-            if (YC + int(BC)) % 2 != 0:
-                botlose(YC)
-            else:
-                botwin(YC, BC)
-        if YS != 0 :
+            BC = random.randint(1, min(2, BS))  # Adjusted to ensure BC doesn't exceed BS - 1
+            
+        if (YC + BC) % 2 != 0:
+            botlose(YC)
+        else:
+            botwin(YC, BC)
+        
+        if YS != 0:
             YC = int(input("Input your coin: "))
             while YC > YS:
                 YC = int(input("Please reinput your coin it is invalid because your coin is smaller than your input coin: "))
-    print("You lose")
-    
-       
+        if BS <= 0:
+            print("Bot lose the game")
+            exit()
+    print("You lose the game")
+
 def main():
     print("Both Bot and Player start with 10 coin")
-    role = int(input("Press 1 to chose EVEN and 2 to chose ODD: "))
+    role = int(input("Press 1 to choose EVEN and 2 to choose ODD: "))
     global YS, BS
     YS = int(20)  # Số đồng xu của bạn
     BS = int(20)  # Số đồng xu của máy
